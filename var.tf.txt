@@ -1,0 +1,17 @@
+variable "AWS_REGION" {
+    default = "ap-northeast-1"
+}
+variable "AMI" {
+    type = map(string)
+
+    default = {
+        # For demo purposes only, we are using ubuntu for the web1 and db1 instances
+        ap-northeast-1 = "ami-0d52744d6551d851e" # Ubuntu 20.04 x86
+    }
+}
+variable "EC2_USER" {
+    default = "ubuntu"
+}
+variable "PUBLIC_KEY_PATH" {
+    default = "~/.ssh/id_rsa.pub" # Replace this with a path to your public key
+}
